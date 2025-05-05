@@ -1,0 +1,96 @@
+@import "variuable";
+@import "mixin";
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// body style
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: $body-bg;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+// defualt styles
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: $h-color;
+}
+
+p {
+    color: $p-color;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: $section-bg;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px .01px #000;
+    animation: loading 2s ease-in-out;
+    @include default-transition;
+
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+a {
+    font-weight: 700;
+    margin: 0 0.75rem;
+    color: $header-text;
+    text-decoration: none;
+    @include default-transition;
+
+    &:hover {
+        transform: scale(1.2);
+        text-shadow: 0 0 10px #fff;
+    }
+}
+
+// custom class and id style
+.pointer {
+    cursor: pointer;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+// animations
+@keyframes loading {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    30%{
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    80% {
+        opacity: .9;
+    }
+
+
+    100% {
+        transform: translateX(0);
+    }
+}

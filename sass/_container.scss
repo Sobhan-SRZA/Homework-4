@@ -1,0 +1,130 @@
+@import "variuable";
+@import "mixin";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $container-bg;
+
+    .container-header {
+        background-color: $header-bg;
+        color: $header-text;
+        width: 100%;
+
+        .container-header__nav {
+            padding: 15px;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .container-body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 2rem 5rem;
+
+        .container-body__getstart {
+            @include forum;
+        }
+
+        .container-body__products {
+            @include products;
+
+            .shopping-cart {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                background-color: $product-bg;
+                color: $h-color;
+                border-radius: 10px;
+                padding: 1rem;
+                box-shadow: 0 1px 2px #000000;
+                @include default-transition;
+
+                &:hover {
+                    box-shadow: none;
+                }
+
+                .total-price {
+                    color: $product-price;
+                    font-weight: 700;
+                }
+
+                .cart-items {
+                    color: $product-price;
+                    display: flex;
+                    flex-direction: row;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+
+                    .cart-item {
+                        background-color: $cart-item-bg;
+                        border-radius: 10px;
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+
+        .container-body__about {
+            p {
+                text-align: right;
+            }
+        }
+    }
+
+    .container-footer {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: $footer-bg;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+
+        .copyright {
+            flex-direction: center;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: space-between;
+            align-items: center;
+
+            .footer-icon,
+            p {
+                color: $footer-text;
+                margin-bottom: 10px;
+            }
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+
+            a {
+                font-weight: normal;
+            }
+        }
+
+        h3 {
+            color: $footer-text;
+        }
+    }
+}

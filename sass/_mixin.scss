@@ -1,0 +1,204 @@
+@import "variuable";
+
+@mixin forum {
+    .forum-singup {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        direction: ltr;
+        align-items: center;
+
+        .input-row {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 8px;
+            align-items: center;
+
+            .error-message {
+                color: #dc3545;
+                font-size: 0.875rem;
+                // position: absolute;
+                bottom: -1.25rem;
+                right: 0;
+                display: none;
+            }
+
+            .input-error {
+                border-color: #dc3545 !important;
+                box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25);
+            }
+
+            .success-message {
+                color: #28a745;
+                font-size: 0.875rem;
+                margin-top: 0.5rem;
+            }
+
+            input {
+                background-color: $forum-input-bg;
+                border: 5px solid $forum-input-bg;
+                border-radius: 3px;
+                max-width: 190px;
+                width: 100%;
+                padding: 2px;
+                height: auto;
+                direction: rtl;
+                margin: 0 0 0 3px;
+                outline: none;
+            }
+
+            label {
+                border: 5px solid $forum-input-bg;
+                background-color: $forum-input-bg;
+                text-align: center;
+                font-weight: 600;
+                inline-size: 100px;
+            }
+
+            #first-input {
+                border-radius: 3px 10px 3px 3px;
+            }
+
+            #first-label {
+                border-radius: 10px 3px 3px 3px;
+            }
+
+            .single {
+                margin-top: 10px;
+                border-radius: 10px 3px 3px 10px;
+            }
+
+            #single-input {
+                border-radius: 3px 10px 10px 3px;
+            }
+
+            .middle {
+                border-radius: 3px;
+            }
+
+            #last-input {
+                border-radius: 3px 3px 13px 13px;
+                font-size: 18px;
+                color: $forum-last-input-text;
+                box-shadow: 3px 8px 4px $forum-last-input-text-shadow;
+                font-weight: 900;
+                max-width: 300px;
+                @include default-transition;
+
+                &:hover {
+                    background-color: $forum-last-input-hover-bg ;
+                    border: 5px solid $forum-last-input-hover-bg ;
+                    box-shadow: none;
+                }
+
+                &:active {
+                    background-color: $forum-last-input-active-bg;
+                    border: 5px solid $forum-last-input-active-bg;
+                    box-shadow: none;
+                }
+            }
+        }
+
+        a {
+            color: $forum-a-color;
+            text-decoration: none;
+            direction: rtl;
+            @include default-transition;
+
+            &:hover {
+                transform: none;
+                color: $forum-a-color-hover;
+            }
+
+            &:active {
+                color: $forum-a-color-active;
+            }
+        }
+    }
+}
+
+@mixin products {
+    .products {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: .9rem;
+        flex-wrap: wrap;
+
+        .products__item {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            background-color: $product-bg;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 1px 2px #000000;
+            @include default-transition;
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: none;
+            }
+
+            .products__item--price {
+                color: $product-price;
+            }
+
+            img {
+                @include default-transition;
+                border-radius: 10px;
+                height: 10rem;
+                width: 10rem;
+
+                &:hover {
+                    box-shadow: 0 1px 2px #ffffff;
+                }
+            }
+
+            button {
+                @include default-transition;
+                border: none;
+                color: $p-color;
+                background-color: $product-btn-bg;
+                border-radius: 10px;
+                height: 2rem;
+                width: 4rem;
+
+                &:hover {
+                    box-shadow: 0 0 3px #000000;
+                }
+
+                &:active {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+@mixin flex-responsive {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+@mixin grid-responsive {
+    grid: 10px;
+    display: grid;
+    grid-template:
+        "logo logo"
+        "links-1 links-2";
+
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+@mixin default-transition {
+    transition: all .5s ease-in-out;
+}
