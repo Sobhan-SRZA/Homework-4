@@ -1,80 +1,157 @@
 <!DOCTYPE html>
-<html lang="per-ir" dir="rtl">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>lesson 12 - homewrok</title>
-  <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork 4 - WebDesign Example</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="container">
-    <header class="container-header">
-      <nav class="container-header__nav">
-        <img src="images/icon.png" alt="web icon" class="container-header--nav__icon icon">
-        <a href="#getstart">شروع کنید</a>
-        <a href="#products">محصولات</a>
-        <a href="#about-us">ارتباط با ما</a>
-      </nav>
-    </header>
+    <div class="container">
+        <header class="container--header">
+            <nav class="container--header__navbar"></nav>
+            <img src="images/icon.png" alt="website icon" class="container--header__icon">
+            <p class="container--header__title">outdoors</p>
+            <p class="container--header__pragraph">is where life happens</p>
+            <a href="#" class="container--header__discover"></a>
+        </header>
 
-    <main class="container-body">
-      <section class="container-body__getstart" id="getstart">
-        <h2>شروع کنید</h2>
-        <p>برای انتخاب محصولات میتوانید وارد شوید و یا در صورت نداشتن حساب کاربری حساب خود را بسازید.</p>
-        <div class="forum-singup">
-          <div id="forum"></div>
+        <main class="container--main">
+            <section class="container--main--section__tour">
+                <h1>exciting tours for adenturous people</h1>
+                <h3>you age going to fell in love with nature</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id rerum repellat itaque illo voluptates
+                    dignissimos tempore, quidem reprehenderit harum libero cupiditate beatae nam sit velit
+                    necessitatibus culpa commodi, possimus architecto!</p>
+                <a href="#" class="seeall">learn more</a>
+                <div class="images">
+                    <img src="images/nature.png" alt="nature tour">
+                    <img src="images/nature.png" alt="nature tour">
+                    <img src="images/nature.png" alt="nature tour">
+                </div>
+            </section>
 
-          <a href="#" class="signup-action pointer"></a>
-        </div>
-      </section>
+            <section class="container--main--section__about">
+                <div class="flash-cards">
+                    <div class="flash-card">
+                        <img src="images/meet-nature.png" alt="" class="icon">
+                        <h3 class="title">explore the world</h3>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, unde
+                            aspernatur. Quaerat harum error voluptatum, velit doloribus amet commodi enim, tenetur
+                            laudantium sunt asperiores eveniet consequatur ducimus temporibus culpa reiciendis!</p>
+                    </div>
+                    <div class="flash-card">
+                        <img src="images/meet-nature.png" alt="" class="icon">
+                        <h3 class="title">meet nature</h3>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, unde
+                            aspernatur. Quaerat harum error voluptatum, velit doloribus amet commodi enim, tenetur
+                            laudantium sunt asperiores eveniet consequatur ducimus temporibus culpa reiciendis!</p>
+                    </div>
+                    <div class="flash-card">
+                        <img src="images/meet-nature.png" alt="" class="icon">
+                        <h3 class="title">find your way</h3>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, unde
+                            aspernatur. Quaerat harum error voluptatum, velit doloribus amet commodi enim, tenetur
+                            laudantium sunt asperiores eveniet consequatur ducimus temporibus culpa reiciendis!</p>
+                    </div>
+                    <div class="flash-card">
+                        <img src="images/meet-nature.png" alt="" class="icon">
+                        <h3 class="title">live healthier life</h3>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, unde
+                            aspernatur. Quaerat harum error voluptatum, velit doloribus amet commodi enim, tenetur
+                            laudantium sunt asperiores eveniet consequatur ducimus temporibus culpa reiciendis!</p>
+                    </div>
+                </div>
+            </section>
 
-      <section class="container-body__products" id="products">
-        <h2>محصولات</h2>
-        <div class="products"></div>
+            <section class="container--main--section__popualar-tours">
+                <h1>most popular tours</h1>
+                <div class="flash-cards">
+                    <div class="flash-card title-orange">
+                        <h3 class="title">the sea explorer</h3>
+                        <div class="options">
+                            <p>3 day tour</p>
+                            <p>up to 30 people</p>
+                            <p>2 tour guid</p>
+                            <p>sleep in cozy hotel</p>
+                            <p>Difficulty: easy</p>
+                        </div>
+                    </div>
+                    <div class="flash-card title-green">
+                        <h3 class="title">the forest hiker</h3>
+                        <div class="options">
+                            <p>7 day tour</p>
+                            <p>up to 10 people</p>
+                            <p>3 tour guid</p>
+                            <p>sleep in forest</p>
+                            <p>Difficulty: meduim</p>
+                        </div>
+                    </div>
+                    <div class="flash-card title-blue">
+                        <h3 class="title">the snow adventure</h3>
+                        <div class="options">
+                            <p>12 day tour</p>
+                            <p>up to 20 people</p>
+                            <p>2 tour guid</p>
+                            <p>sleep in provided tents</p>
+                            <p>Difficulty: hard</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <div class="shopping-cart" style="display: none;">
-          <div class="total-price"></div>
-          <div class="cart-items"></div>
-        </div>
-      </section>
+            <section class="container--main--section__stories">
+                <h1>we make people geuinely happy</h1>
+                <div class="flash-cards">
+                    <div class="flash-card">
+                        <img src="images/meet-nature.png" alt="" class="icon">
+                        <h3 class="title">i had the best weekend ever with my family</h3>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, unde
+                            aspernatur. Quaerat harum error voluptatum, velit doloribus amet commodi enim, tenetur
+                            laudantium sunt asperiores eveniet consequatur ducimus temporibus culpa reiciendis!</p>
+                    </div>
+                    <div class="flash-card">
+                        <img src="images/meet-nature.png" alt="" class="icon">
+                        <h3 class="title">wow! my life is completely defferent now</h3>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, unde
+                            aspernatur. Quaerat harum error voluptatum, velit doloribus amet commodi enim, tenetur
+                            laudantium sunt asperiores eveniet consequatur ducimus temporibus culpa reiciendis!</p>
+                    </div>
+                </div>
 
-      <section class="container-body__about" id="about-us">
-        <h2>درباره ما</h2>
-        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
-          بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع
-          با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
-          متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
-          پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط
-          سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
-          طراحی اساسا مورد استفاده قرار گیرد.</p>
-      </section>
-    </main>
+                <a href="#" class="seeall">read all stories</a>
+            </section>
 
-    <footer class="container-footer">
-      <div class="links links-1">
-        <h3>لینک ها</h3>
-        <a href="#getstart">شروع کنید</a>
-        <a href="#products">محصولات</a>
-        <a href="#about-us">ارتباط با ما</a>
-      </div>
-      <div class="copyright">
-        <img src="images/icon.png" alt="web icon" class="footer-icon icon">
-        <p>&copy; تمام حقوق مادی و معنوی برای این سایت محفوظ می باشد.</p>
-        <p>1404</p>
-      </div>
-      <div class="links links-2">
-        <h3>لینک ها</h3>
-        <a href="#getstart">شروع کنید</a>
-        <a href="#products">محصولات</a>
-        <a href="#about-us">ارتباط با ما</a>
-      </div>
-    </footer>
-  </div>
+            <section class="container--main--section__booking">
+                <div class="booking-forum">
+                    <h1>start booking now!</h1>
+                    <input type="text" placeholder="FULL name">
+                    <input type="email" placeholder="Email">
+                    <div class="checks">
+                        <input type="checkbox" name="small-tour" id="small-tour">
+                        <input type="checkbox" name="big-tour" id="big-tour">
+                    </div>
+                    <input type="submit" value="next step">
+                </div>
+            </section>
+        </main>
+
+        <footer class="container--footer">
+            <img src="images/icon.png" alt="" class="icon">
+            <div class="under-icon">
+                <div class="links">
+                    <a href="#">company orivacy policy</a>
+                    <a href="#">contact us term</a>
+                    <a href="#">carrers</a>
+                </div>
+                <p>&copy; Build by Sobhan-SRZA Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam nulla
+                    beatae labore atque ipsa, illo mollitia ab sapiente quo officia quaerat, in id reiciendis vero ea
+                    veniam laborum similique adipisci!</p>
+            </div>
+        </footer>
+    </div>
 </body>
-
-<script src="script.js"></script>
 
 </html>
