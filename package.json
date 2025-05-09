@@ -1,15 +1,11 @@
 {
   "name": "homework-4",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "watch":"sass sass/main.scss style.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "description": "انجام پروزه تمرینی از روی عکس",
   "devDependencies": {
     "sass": "^1.87.0"
   }
