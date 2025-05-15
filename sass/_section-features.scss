@@ -1,0 +1,71 @@
+@import "mixins";
+@import "variables";
+
+.section-features {
+    padding: 20rem 0;
+    background-image: linear-gradient(to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)),
+        url("./images/our-works-ticker-boy.jpg");
+    background-size: cover;
+    transform: skewY(-7deg);
+    margin-top: -10rem;
+
+    &>* {
+        transform: skewY(7deg);
+    }
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+
+    .row {
+        padding-left: 8rem;
+        padding-right: 8rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .feature-box {
+        background-color: rgba($color-white, .8);
+        padding: 2.5rem;
+        text-align: center;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        @include default-transition(.3s);
+
+        h3 {
+            text-transform: uppercase;
+        }
+
+        &__icon {
+            font-size: 6rem;
+            margin-bottom: 1.5rem;
+            @include gradient-text($color-primary-light, $color-primary-dark);
+        }
+
+        &__text {
+            font-size: 1.5rem;
+            color: $color-grey-dark;
+        }
+
+        &:hover {
+            transform: translateY(-1.5rem) scale(1.03);
+        }
+    }
+
+    .col-1-of-3 {
+        width: calc((100% - 3 * #{$gutter-horizontal}) / 3);
+
+        &:not(:first-child, :last-child) {
+            width: calc((100% - 1 * #{$gutter-horizontal}) / 3);
+        }
+
+        @include respond(tab-port) {
+            width: 100% !important;
+            margin-right: 0;
+            margin-bottom: $gutter-vertical;
+        }
+    }
+}

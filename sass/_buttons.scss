@@ -1,0 +1,43 @@
+@import "variables";
+@import "animations";
+@import "mixins";
+
+.btn {
+
+    &,
+    &:link,
+    &:visited {
+        padding: 1.5rem 4rem;
+        font-size: 1.6rem;
+        border-radius: 10rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        @include default-transition(.3s);
+        position: relative;
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-primary;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    }
+
+    &--animated {
+        animation: moveInBottom 0.5s ease-out 0.75s;
+        animation-fill-mode: backwards;
+    }
+}

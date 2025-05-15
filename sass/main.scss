@@ -1,3 +1,37 @@
-@import "colors";
-@import "default";
-@import "container";
+@import "variables";
+@import "base";
+@import "buttons";
+@import "header";
+@import "navigation";
+@import "typography";
+@import "mixins";
+@import "section-about";
+@import "section-features";
+@import "section-tours";
+
+// Footer
+.footer {
+    background-color: #333;
+    padding: 8rem 0;
+    text-align: center;
+
+    &__logo {
+        color: $color-white;
+        font-size: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    &__nav {
+        margin-bottom: 4rem;
+
+        a {
+            color: $color-white;
+            margin: 0 2rem;
+            text-decoration: none;
+        }
+    }
+
+    &__copyright {
+        color: #aaa;
+    }
+}
