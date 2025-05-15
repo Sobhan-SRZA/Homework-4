@@ -261,7 +261,7 @@ main {
   }
 }
 .heading-primary {
-  color: #fff;
+  color: #777;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem;
@@ -282,9 +282,6 @@ main {
 }
 
 .heading-secondary {
-  background-image: linear-gradient(to right, #1aae7d, #a2ff91);
-  background-clip: text;
-  color: transparent;
   text-transform: uppercase;
   font-size: 3.5rem;
   text-align: center;
@@ -379,7 +376,7 @@ main {
 }
 .section-about .btn-text {
   background-image: linear-gradient(to right, #1aae7d, #a2ff91);
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   margin-top: 7rem;
 }
@@ -439,7 +436,7 @@ main {
   font-size: 6rem;
   margin-bottom: 1.5rem;
   background-image: linear-gradient(to right, #a2ff91, #1aae7d);
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 .section-features .feature-box__text {
