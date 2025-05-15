@@ -53,7 +53,7 @@
 // Gradient Text
 @mixin gradient-text($color1, $color2) {
     background-image: linear-gradient(to right, $color1, $color2);
-    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
 }
 
