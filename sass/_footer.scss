@@ -1,0 +1,87 @@
+@import "variables";
+@import "mixins";
+
+.footer {
+    background-color: $color-grey-dark-3;
+    padding: 10rem 0;
+    font-size: 1.4rem;
+    color: $color-grey-light-1;
+
+    @include respond(tab-port) {
+        padding: 8rem 0;
+    }
+
+    .row{
+        display: inline-flex;
+        flex-direction: row;
+        gap: 10rem;
+    }
+
+    &__logo-box {
+        text-align: center;
+        margin-bottom: 8rem;
+
+        @include respond(tab-port) {
+            margin-bottom: 6rem;
+        }
+    }
+
+    &__logo {
+        width: 15rem;
+        height: auto;
+        filter: brightness(95%);
+    }
+
+    &__navigation {
+        width: 50%;
+        margin-left: 5rem;
+        padding-top: 2rem;
+        border-top: 1px solid $color-grey-dark;
+        display: inline-block;
+
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            color: $color-grey-light-1;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            @include default-transition(.2s);
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary;
+            box-shadow: 0 1rem 2rem rgba($color-black, .4);
+            transform: rotate(5deg) scale(1.3);
+        }
+    }
+
+    &__copyright {
+        width: 50%;
+        margin-right: 5rem;
+        padding-top: 2rem;
+        border-top: 1px solid $color-grey-dark;
+        float: right;
+
+        @include respond(tab-port) {
+            float: none;
+            text-align: center;
+        }
+    }
+}

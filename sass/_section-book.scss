@@ -1,0 +1,141 @@
+.section-book {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom,
+            $color-primary-light,
+            $color-primary-dark);
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+}
+
+.book {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    background-image: linear-gradient(105deg,
+            rgba($color-white, .92) 0%,
+            rgba($color-white, .92) 50%,
+            transparent 50%),
+        url("./images/our-works-ticker-boy.jpg");
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+
+    @include respond(tab-port) {
+        background-image: linear-gradient(to right,
+                rgba($color-white, .92) 0%,
+                rgba($color-white, .92) 100%),
+            url("./images/our-works-ticker-boy.jpg");
+    }
+}
+
+.form {
+    width: 50%;
+    padding: 6rem;
+
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+    }
+
+    &__group:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+
+    &__input {
+        @include default-transition;
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($color-white, .9);
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 90%;
+        display: block;
+        
+        &:focus,
+        &:focus-within,
+        &:not(:placeholder-shown) {
+            &+.form__label {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(-8rem);
+            }
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom: 3px solid $color-primary;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid $color-secondary-dark;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark;
+        }
+    }
+
+    &__label {
+        @include default-transition;
+
+        font-size: 1.4rem;
+        font-weight: 700;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(1rem, -3rem);
+        color: rgba($color-grey-dark, 0.8);
+    }
+
+    &__radio-group {
+        width: 45%;
+        display: inline-block;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__radio-input {
+        display: none;
+    }
+
+    &__radio-label {
+        font-size: 1.6rem;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4.5rem;
+    }
+
+    &__radio-button {
+        height: 3rem;
+        width: 3rem;
+        border: 5px solid $color-primary;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: -.4rem;
+
+        &::after {
+            @include center-content;
+            @include default-transition(.2s);
+
+            content: "";
+            display: block;
+            height: 1.3rem;
+            width: 1.3rem;
+            border-radius: 50%;
+            background-color: $color-primary;
+            opacity: 0;
+        }
+    }
+
+    &__radio-input:checked~&__radio-label &__radio-button::after {
+        opacity: 1;
+    }
+}

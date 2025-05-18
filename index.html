@@ -42,7 +42,7 @@
                     <span class="heading-primary--sub">IS WHERE LIFE HAPPENS</span>
                 </h1>
 
-                <a href="#section-tours" class="btn btn--white btn--animated">DISCOVER OUR TOURS</a>
+                <a href="#section-tours" class="btn btn--white btn--animated u-margin-top-big">DISCOVER OUR TOURS</a>
             </div>
             <div class="header__clip"></div>
         </header>
@@ -66,7 +66,7 @@
                         accusamus modi dolorem consequatur!
                     </p>
 
-                    <a href="#" class="btn-text u-margin-top-big">Learn more &rarr;</a>
+                    <a href="#" class="btn--text u-margin-top-big">Learn more &rarr;</a>
                 </div>
 
                 <div class="col-1-of-2">
@@ -303,39 +303,80 @@
             </div>
 
             <div class="u-center-text">
-                <a href="#" class="btn-text">Read all stories &rarr;</a>
+                <a href="#" class="btn--text">Read all stories &rarr;</a>
             </div>
         </section>
 
         <!-- Section 7.png -->
-        <section class="booking">
-            <h2 class="heading-secondary">START BOOKING NOW!</h2>
-            <form class="form">
-                <input type="text" placeholder="FULL name" class="form__input">
-                <input type="email" placeholder="Email" class="form__input">
-                <div class="form__group">
-                    <input type="radio" name="tour-size" id="small">
-                    <label for="small">small tour group</label>
-                    <input type="radio" name="tour-size" id="large">
-                    <label for="large">large tour group</label>
+        <section class="section-book">
+            <div class="row">
+                <div class="book">
+                    <form class="form">
+                        <div class="u-center-text u-margin-bottom-medium">
+                            <h2 class="heading-secondary">
+                                START BOOKING NOW!
+                            </h2>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="FULL name" id="name" required>
+                            <label for="name" class="form__label">Full name</label>
+                        </div>
+
+                        <div class="form__group">
+                            <input type="email" class="form__input" placeholder="Email" id="email" required>
+                            <label for="email" class="form__label">Email address</label>
+                        </div>
+
+                        <div class="form__group">
+                            <div class="form__radio-group">
+                                <input type="radio" class="form__radio-input" id="small" name="size">
+                                <label for="small" class="form__radio-label">
+                                    <span class="form__radio-button"></span>
+                                    Small tour group
+                                </label>
+                            </div>
+
+                            <div class="form__radio-group">
+                                <input type="radio" class="form__radio-input" id="large" name="size">
+                                <label for="large" class="form__radio-label">
+                                    <span class="form__radio-button"></span>
+                                    Large tour group
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form__group">
+                            <button class="btn btn--green u-margin-top-small">NEXT STEP &rarr;</button>
+                        </div>
+                    </form>
                 </div>
-                <button class="btn">NEXT STEP &rarr;</button>
-            </form>
+            </div>
         </section>
 
         <!-- Section 8.png -->
         <footer class="footer">
-            <h3 class="footer__logo">NATOURS</h3>
-            <div class="footer__nav">
-                <a href="#">COMPANY</a>
-                <a href="#">CONTACT US</a>
-                <a href="#">CARRERS</a>
-                <a href="#">PRIVACY POLICY</a>
-                <a href="#">TERMS</a>
+            <div class="footer__logo-box">
+                <img src="images/persian-caesar-3.png" alt="Full logo" class="footer__logo">
             </div>
-            <p class="footer__copyright">
-                Built by MAHDI SAHEBGHARANI &copy; Lorem ipsum dolor sit...
-            </p>
+
+            <div class="row">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                    </ul>
+                </div>
+                <p class="footer__copyright">
+                    Built by <a href="#" class="footer__link">Sobhan-SRZA & DeepSeek</a> for his Advanced CSS and Sass
+                    course.<br>
+                    Copyright &copy; by Jonas Schmedtmann. Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.<br>
+                    Officiis perspiciatis similique quaerat voluptatum eaque! Dignissimos.
+                </p>
+            </div>
         </footer>
     </main>
 </body>
