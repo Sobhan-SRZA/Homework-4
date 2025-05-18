@@ -2,62 +2,67 @@
 @import "variables";
 
 .section-stories {
-    display: flex;
-    flex-direction: column;
-    gap: 10rem;
     padding: 15rem 0;
     position: relative;
 
     @include respond(tab-port) {
         padding: 10rem 0;
     }
-}
 
-.bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: .15;
-    overflow: hidden;
+    .row {
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
+    }
 
-    &__content {
+    .bg-video {
+        position: absolute;
+        top: 0;
+        left: 0;
         height: 100%;
         width: 100%;
-        object-fit: cover;
+        z-index: -1;
+        opacity: .15;
+        overflow: hidden;
+
+        &__content {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
     }
+
 }
 
 .story {
+    height: max-content;
     width: 75%;
     margin: 0 auto;
     box-shadow: 0 3rem 6rem rgba($color-black, .1);
     background-color: rgba($color-white, .6);
     border-radius: 3px;
-    padding: 6rem;
-    padding-left: 9rem;
+    padding: 6rem 6rem 0 6rem;
     transform: skewX(-12deg);
-
+    
     @include respond(tab-port) {
         width: 100%;
-        padding: 4rem;
-        padding-left: 7rem;
+        padding: 4rem 4rem 0 4rem;
         transform: skewX(0);
     }
 
     &__shape {
+        margin-left: 1rem;
+        margin-right: 1rem;
         width: 15rem;
         height: 15rem;
         float: left;
         shape-outside: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
-        transform: translate(-25%, -25%) translateX(-1rem) skewX(12deg);
+        transform: translate(-25%, -25%) skewX(12deg);
         position: relative;
 
         @include respond(tab-port) {
-            transform: translate(-25%, -25%) translateX(-1rem) skewX(0);
+            transform: translate(-25%, -25%) skewX(0);
         }
     }
 
@@ -81,6 +86,14 @@
 
     &__text {
         transform: skewX(12deg);
+
+        h3 {
+            margin-top: -2rem;
+        }
+
+        p {
+            font-size: 1.7rem;
+        }
 
         @include respond(tab-port) {
             transform: skewX(0);

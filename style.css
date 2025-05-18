@@ -542,7 +542,7 @@ main {
   width: calc((100% - 1 * 6rem) / 3);
 }
 .section-features .col-4-of-4, .section-features .col-1-of-4 {
-  width: calc((100% - 3 * 6rem) / 3);
+  width: calc((100% - 2.2 * 6rem) / 3);
 }
 @media (max-width: 56.25em) {
   .section-features .col {
@@ -685,9 +685,6 @@ main {
 }
 
 .section-stories {
-  display: flex;
-  flex-direction: column;
-  gap: 10rem;
   padding: 15rem 0;
   position: relative;
 }
@@ -696,8 +693,12 @@ main {
     padding: 10rem 0;
   }
 }
-
-.bg-video {
+.section-stories .row {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+.section-stories .bg-video {
   position: absolute;
   top: 0;
   left: 0;
@@ -707,42 +708,43 @@ main {
   opacity: 0.15;
   overflow: hidden;
 }
-.bg-video__content {
+.section-stories .bg-video__content {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
 .story {
+  height: max-content;
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
-  padding: 6rem;
-  padding-left: 9rem;
+  padding: 6rem 6rem 0 6rem;
   transform: skewX(-12deg);
 }
 @media (max-width: 56.25em) {
   .story {
     width: 100%;
-    padding: 4rem;
-    padding-left: 7rem;
+    padding: 4rem 4rem 0 4rem;
     transform: skewX(0);
   }
 }
 .story__shape {
+  margin-left: 1rem;
+  margin-right: 1rem;
   width: 15rem;
   height: 15rem;
   float: left;
   shape-outside: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
-  transform: translate(-25%, -25%) translateX(-1rem) skewX(12deg);
+  transform: translate(-25%, -25%) skewX(12deg);
   position: relative;
 }
 @media (max-width: 56.25em) {
   .story__shape {
-    transform: translate(-25%, -25%) translateX(-1rem) skewX(0);
+    transform: translate(-25%, -25%) skewX(0);
   }
 }
 .story__img {
@@ -764,6 +766,12 @@ main {
 }
 .story__text {
   transform: skewX(12deg);
+}
+.story__text h3 {
+  margin-top: -2rem;
+}
+.story__text p {
+  font-size: 1.7rem;
 }
 @media (max-width: 56.25em) {
   .story__text {
