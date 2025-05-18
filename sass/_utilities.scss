@@ -1,0 +1,91 @@
+@import "mixins";
+
+.u-center-text {
+    text-align: center !important;
+}
+
+.u-margin-bottom {
+    &-small {
+        margin-bottom: 2rem !important;
+
+        @include respond(tab-port) {
+            margin-bottom: 1.5rem !important;
+        }
+    }
+
+    &-medium {
+        margin-bottom: 4rem !important;
+
+        @include respond(tab-port) {
+            margin-bottom: 3rem !important;
+        }
+    }
+
+    &-big {
+        margin-bottom: 8rem !important;
+
+        @include respond(tab-port) {
+            margin-bottom: 5rem !important;
+        }
+    }
+}
+
+.u-margin-top {
+    &-huge {
+        margin-top: 10rem !important;
+
+        @include respond(tab-port) {
+            margin-top: 7rem !important;
+        }
+    }
+
+    &-small {
+        margin-top: 2rem !important;
+
+        @include respond(tab-port) {
+            margin-top: 1.5rem !important;
+        }
+    }
+
+    &-medium {
+        margin-top: 4rem !important;
+
+        @include respond(tab-port) {
+            margin-top: 3rem !important;
+        }
+    }
+
+    &-big {
+        margin-top: 8rem !important;
+
+        @include respond(tab-port) {
+            margin-top: 5rem !important;
+        }
+    }
+}
+
+.btn-text {
+    @include gradient-text($color-primary-dark, $color-primary-light);
+
+    &:link,
+    &:visited {
+        font-size: 1.6rem;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+        @include default-transition();
+    }
+
+    &:hover {
+        background: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}

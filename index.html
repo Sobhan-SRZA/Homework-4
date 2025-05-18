@@ -12,27 +12,26 @@
 <body>
     <main>
         <!-- Section 1.png -->
+        <nav class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <div class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">About Natours</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Your Benefits</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Popular Tours</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Stories</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Book Now</a></li>
+                </ul>
+            </div>
+        </nav>
         <header class="header">
-            <nav class="navigation">
-                <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-
-                <label for="navi-toggle" class="navigation__button">
-                    <span class="navigation__icon">&nbsp;</span>
-                </label>
-
-                <div class="navigation__background">&nbsp;</div>
-
-                <div class="navigation__nav">
-                    <ul class="navigation__list">
-                        <li class="navigation__item"><a href="#" class="navigation__link">About Natours</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Your Benefits</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Popular Tours</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Stories</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Book Now</a></li>
-                    </ul>
-                </div>
-            </nav>
-
             <div class="header__logo-box">
                 <img src="images/persian-caesar-2.png" alt="Logo" class="header__logo">
             </div>
@@ -43,8 +42,9 @@
                     <span class="heading-primary--sub">IS WHERE LIFE HAPPENS</span>
                 </h1>
 
-                <a href="#" class="btn btn--white btn--animated">DISCOVER OUR TOURS</a>
+                <a href="#section-tours" class="btn btn--white btn--animated">DISCOVER OUR TOURS</a>
             </div>
+            <div class="header__clip"></div>
         </header>
 
         <!-- Section 2.png -->
@@ -66,7 +66,7 @@
                         accusamus modi dolorem consequatur!
                     </p>
 
-                    <a href="#" class="btn-text">Learn more &rarr;</a>
+                    <a href="#" class="btn-text u-margin-top-big">Learn more &rarr;</a>
                 </div>
 
                 <div class="col-1-of-2">
@@ -87,7 +87,7 @@
         <!-- Section 3.png -->
         <section class="section-features">
             <div class="row">
-                <div class="col-1-of-3">
+                <div class="col col-1-of-4">
                     <div class="feature-box">
                         <i class="feature-box__icon icon-basic-world"></i>
                         <h3 class="heading-tertiary u-margin-bottom-small">Explore the world</h3>
@@ -99,7 +99,7 @@
                     </div>
                 </div>
 
-                <div class="col-1-of-3">
+                <div class="col col-2-of-4">
                     <div class="feature-box">
                         <i class="feature-box__icon icon-basic-compass"></i>
                         <h3 class="heading-tertiary u-margin-bottom-small">Meet nature</h3>
@@ -111,7 +111,7 @@
                     </div>
                 </div>
 
-                <div class="col-1-of-3">
+                <div class="col col-3-of-4">
                     <div class="feature-box">
                         <i class="feature-box__icon icon-basic-map"></i>
                         <h3 class="heading-tertiary u-margin-bottom-small">Find your way</h3>
@@ -123,7 +123,7 @@
                     </div>
                 </div>
 
-                <div class="col-1-of-3">
+                <div class="col col-4-of-4">
                     <div class="feature-box">
                         <i class="feature-box__icon icon-basic-map"></i>
                         <h3 class="heading-tertiary u-margin-bottom-small">live healthier life</h3>
@@ -146,7 +146,7 @@
             </div>
 
             <div class="row">
-                <div class="col-1-of-3">
+                <div class="col col-1-of-3">
                     <div class="card">
                         <div class="card__side card__side--front">
                             <div class="card__picture card__picture--1">
@@ -167,7 +167,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="card__side card__side--back card__side--back-1">
+                        <div class="card__side card__side--back card__side--back--1">
                             <div class="card__cta">
                                 <div class="card__price-box">
                                     <p class="card__price-only">Only</p>
@@ -179,32 +179,32 @@
                     </div>
                 </div>
 
-                <div class="col-1-of-3">
+                <div class="col col-2-of-3">
                     <div class="card">
                         <div class="card__side card__side--front">
-                            <div class="card__picture card__picture--1">
+                            <div class="card__picture card__picture--2">
                                 &nbsp;
                             </div>
                             <h4 class="card__heading">
-                                <span class="card__heading-span card__heading-span--1">
-                                    THE SEA EXPLORER
+                                <span class="card__heading-span card__heading-span--2">
+                                    the forest hiker
                                 </span>
                             </h4>
                             <div class="card__details">
                                 <ul>
-                                    <li>3 day tour</li>
-                                    <li>Up to 30 people</li>
-                                    <li>2 tour guides</li>
-                                    <li>Sleep in cozy hotels</li>
-                                    <li>Difficulty: easy</li>
+                                    <li>7 day tour</li>
+                                    <li>Up to 10 people</li>
+                                    <li>3 tour guides</li>
+                                    <li>Sleep in forest</li>
+                                    <li>Difficulty: medium</li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="card__side card__side--back card__side--back-1">
+                        <div class="card__side card__side--back card__side--back--2">
                             <div class="card__cta">
                                 <div class="card__price-box">
                                     <p class="card__price-only">Only</p>
-                                    <p class="card__price-value">$297</p>
+                                    <p class="card__price-value">$359</p>
                                 </div>
                                 <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
@@ -212,53 +212,98 @@
                     </div>
                 </div>
 
-                <div class="col-1-of-3">
+                <div class="col col-3-of-3">
                     <div class="card">
                         <div class="card__side card__side--front">
-                            <div class="card__picture card__picture--1">
+                            <div class="card__picture card__picture--3">
                                 &nbsp;
                             </div>
                             <h4 class="card__heading">
-                                <span class="card__heading-span card__heading-span--1">
-                                    THE SEA EXPLORER
+                                <span class="card__heading-span card__heading-span--3">
+                                    the snow adventure
                                 </span>
                             </h4>
                             <div class="card__details">
                                 <ul>
-                                    <li>3 day tour</li>
-                                    <li>Up to 30 people</li>
+                                    <li>12 day tour</li>
+                                    <li>Up to 20 people</li>
                                     <li>2 tour guides</li>
-                                    <li>Sleep in cozy hotels</li>
-                                    <li>Difficulty: easy</li>
+                                    <li>Sleep in provided tents</li>
+                                    <li>Difficulty: hard</li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="card__side card__side--back card__side--back-1">
+                        <div class="card__side card__side--back card__side--back--3">
                             <div class="card__cta">
                                 <div class="card__price-box">
                                     <p class="card__price-only">Only</p>
-                                    <p class="card__price-value">$297</p>
+                                    <p class="card__price-value">$295</p>
                                 </div>
                                 <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="u-center-text u-margin-top-huge">
-                <a href="#" class="btn btn--green">Discover all tours</a>
             </div>
         </section>
 
         <!-- Section 5.png & 6.png -->
-        <section class="stories">
-            <h2 class="heading-secondary">WE MAKE PEOPLE GENUINELY HAPPY</h2>
-            <div class="story">
-                <blockquote class="story__text">
-                    "I HAD THE BEST WEEKEND EVER WITH MY FAMILY"
-                </blockquote>
-                <p class="story__author">Lorem ipsum dolor sit amet consectetur...</p>
+        <!-- 5.png -->
+        <section class="section-stories">
+            <div class="bg-video">
+                <video class="bg-video__content" autoplay muted loop>
+                    <source src="images/bandicam 2025-04-29 11-33-24-065.mp4" type="video/mp4">
+                    Your browser does not support the video tag!
+                </video>
+            </div>
+
+            <div class="u-center-text u-margin-bottom-small">
+                <h2 class="heading-secondary">
+                    WE MAKE PEOPLE GENUINELY HAPPY
+                </h2>
+            </div>
+
+            <div class="row">
+                <div class="story">
+                    <figure class="story__shape">
+                        <img src="images/padio.png" alt="User 1" class="story__img">
+                        <figcaption class="story__caption">Mary Smith</figcaption>
+                    </figure>
+                    <div class="story__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">
+                            I HAD THE BEST WEEKEND EVER WITH MY FAMILY
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Aperiam, ipsum sapiente aspernatur libero repellat quis
+                            consequatur ducimus quam vitae voluptatum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6.png -->
+            <div class="row">
+                <div class="story">
+                    <figure class="story__shape">
+                        <img src="images/pc-bot.png" alt="User 2" class="story__img">
+                        <figcaption class="story__caption">Jack Wilson</figcaption>
+                    </figure>
+                    <div class="story__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">
+                            WOW! MY LIFE IS COMPLETELY DIFFERENT NOW
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Aperiam, ipsum sapiente aspernatur libero repellat quis
+                            consequatur ducimus quam vitae voluptatum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="u-center-text">
+                <a href="#" class="btn-text">Read all stories &rarr;</a>
             </div>
         </section>
 

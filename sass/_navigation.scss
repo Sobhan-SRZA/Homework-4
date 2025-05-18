@@ -82,6 +82,7 @@
 
     &__list {
         @include center-content;
+        
         list-style: none;
         text-align: center;
     }

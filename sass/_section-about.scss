@@ -21,7 +21,7 @@
 
         max-width: $grid-width;
         margin-left: 6rem;
-        margin-right: 6rem;
+        margin-right: 15rem;
 
     }
 
@@ -85,34 +85,6 @@
 
         &:not(:last-child) {
             margin-bottom: 3rem;
-        }
-    }
-
-    .btn-text {
-        @include gradient-text($color-primary-dark, $color-primary-light);
-
-        margin-top: 7rem;
-
-        &:link,
-        &:visited {
-            font-size: 1.6rem;
-            color: $color-primary;
-            display: inline-block;
-            text-decoration: none;
-            border-bottom: 1px solid $color-primary;
-            padding: 3px;
-            @include default-transition();
-        }
-
-        &:hover {
-            background: $color-primary;
-            color: $color-white;
-            box-shadow: 0 1rem 2rem rgba($color-black, .15);
-            transform: translateY(-2px);
-        }
-
-        &:active {
-            transform: translateY(0);
         }
     }
 }

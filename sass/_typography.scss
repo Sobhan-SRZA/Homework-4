@@ -5,7 +5,6 @@
     color: $color-grey-dark;
     text-transform: uppercase;
     backface-visibility: hidden;
-    margin-bottom: 6rem;
 
     &--main {
         display: block;
@@ -25,14 +24,13 @@
 }
 
 .heading-secondary {
+    @include gradient-text($color-title-light, $color-title-dark);
     text-transform: uppercase;
     font-size: 3.5rem;
     text-align: center;
-    margin-bottom: 8rem;
 }
 
 .heading-tertiary {
     font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: $color-black;
+    color: $color-grey-dark;
 }
