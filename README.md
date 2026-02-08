@@ -1,66 +1,158 @@
-## Contact 
-<div align="center">
-  <a href="https://srza.ir" target="_blank">
-   <img align="left" src="https://raw.githubusercontent.com/Sobhan-SRZA/Sobhan-SRZA/refs/heads/main/images/social.png" alt="Sobhan-SRZA social" width=400px>
-  </a>
+# 🌿 Natours – Advanced CSS & Sass Homework-4
 
-  <a href="https://t.me/d_opa_mine" target="_blank">
-   <img alt="Telegram"
-    src="https://raw.githubusercontent.com/Sobhan-SRZA/Sobhan-SRZA/refs/heads/main/images/telegram-ch.svg"
-    height="30" />
-  </a>
+**A beautiful, fully responsive static landing page for a fictional outdoor tour company.**
 
-  <a href="https://t.me/Sobhan_SRZA" target="_blank">
-   <img alt="Telegram"
-    src="https://raw.githubusercontent.com/Sobhan-SRZA/Sobhan-SRZA/refs/heads/main/images/telegram-ac.svg"
-    height="30" />
-  </a>
+Built as a personal homework project following Jonas Schmedtmann’s Advanced CSS & Sass course, with my own customizations, Sass architecture improvements, and GitHub Pages deployment.
 
-  <a href="https://www.instagram.com/mr.sinre?igsh=cWk1aHdhaGRnOGg%3D&utm_source=qr" target="_blank">
-   <img alt="Instagram"
-    src="https://raw.githubusercontent.com/Sobhan-SRZA/Sobhan-SRZA/refs/heads/main/images/instagram.svg"
-    height="30" />
-  </a>
+Live Demo: https://sobhan-srza.github.io/homework-4 (or wherever you deployed it)
 
-  <a href="https://www.twitch.tv/sobhan_srza" target="_blank">
-   <img alt="Twitch"
-    src="https://raw.githubusercontent.com/Sobhan-SRZA/Sobhan-SRZA/refs/heads/main/images/twitch.svg"
-    height="30" />
-  </a>
+---
 
-  <a href="https://www.youtube.com/@mr_sinre?app=desktop&sub_confirmation=1" target="_blank">
-   <img alt="YouTube"
-    src="https://raw.githubusercontent.com/Sobhan-SRZA/Sobhan-SRZA/refs/heads/main/images/youtube.svg"
-    height="30" />
-  </a>
-  
-  <a href="https://github.com/Sobhan-SRZA" target="_blank">
-   <img alt="Github"
-    src="https://raw.githubusercontent.com/Sobhan-SRZA/Sobhan-SRZA/refs/heads/main/images/github.svg"
-    height="30" />
-  </a>
-  
-  <p align="left">
-   <a href="https://discord.gg/xh2S2h67UW" target="_blank">
-    <img src="https://discord.com/api/guilds/1054814674979409940/widget.png?style=banner2" alt="pc-development.png">
-   </a>
-  </p>
+## ✨ Key Features
 
-  <p align="right">
-   <a href="https://discord.gg/54zDNTAymF" target="_blank">
-    <img src="https://discord.com/api/guilds/1181764925874507836/widget.png?style=banner2" alt="pc-club.png">
-   </a>
-  </p>
+- ✅ **Mobile-first responsive design** (phone → tablet → desktop)
+- ✅ **Pure CSS 3D flip cards** for tour packages
+- ✅ **Hamburger menu** with animated background expansion (no JS!)
+- ✅ **Floating label form** with validation styles
+- ✅ **Video background** section (stories)
+- ✅ **Skewed hero section** with clip-path
+- ✅ **Smooth hover animations** & entrance animations
+- ✅ **Sass 7-1 architecture** (clean, scalable, maintainable)
+- ✅ **Custom media query mixin** with named breakpoints
+- ✅ **GitHub Pages auto-deployment** via GitHub Actions
+- ✅ **Zero JavaScript** – everything is pure HTML + CSS
 
-  <div align="center">
-   <a href="https://discord.com/users/865630940361785345" target="_blank">
-    <img alt="My Discord Account" src="https://discord.c99.nl/widget/theme-1/865630940361785345.png" />
-   </a>
-    <a href="https://discord.com/users/986314682547716117" target="_blank" align="right">
-    <img alt="Team Discord Account" src="https://discord.c99.nl/widget/theme-1/986314682547716117.png" />
-   </a>
-  </div>
+---
 
- </div>
+## 📁 Project Structure
 
-</div>
+```
+homework-4/
+├── index.html                          # Main HTML file
+├── style.css                           # Compiled CSS (auto-generated)
+├── .gitignore
+├── package.json
+├── README.md
+├── .github/
+│   └── workflows/
+│       └── static.yml                  # GitHub Pages deployment workflow
+├── sass/
+│   ├── main.scss                       # Entry point – imports everything
+│   ├── _animations.scss
+│   ├── _base.scss
+│   ├── _buttons.scss
+│   ├── _footer.scss
+│   ├── _header.scss
+│   ├── _icons.scss
+│   ├── _mixins.scss                    # Media queries, clearfix, gradients, etc.
+│   ├── _navigation.scss
+│   ├── _section-about.scss
+│   ├── _section-book.scss
+│   ├── _section-features.scss
+│   ├── _section-stories.scss
+│   ├── _section-tours.scss
+│   ├── _typography.scss
+│   ├── _utilities.scss
+│   └── _variables.scss                 # All colors, breakpoints, grid sizes
+└── images/                             # (not committed – add your own)
+    ├── persian-caesar-1.png
+    ├── persian-caesar-2.png
+    ├── nature-video.mp4
+    └── ...
+```
+
+### Sass Architecture (7-1 Pattern)
+- `main.scss` → imports all partials in logical order
+- `_variables.scss` → colors, breakpoints, grid
+- `_mixins.scss` → reusable code (respond, gradient-text, etc.)
+- One partial per major section/component
+
+---
+
+## 🛠️ Available Commands (NPM Scripts)
+
+```bash
+npm install          # Install dev dependencies (Sass)
+npm run watch        # Compile Sass → style.css and watch for changes (recommended)
+```
+
+That’s it! No build step needed – just open `index.html` in your browser.
+
+---
+
+## 🚀 Deployment (GitHub Pages)
+
+The project uses GitHub Actions to automatically deploy on every push to `main`:
+
+- File: `.github/workflows/static.yml`
+- Deploys the entire repository root as static site
+- No extra configuration needed
+
+Just push → site updates instantly!
+
+---
+
+## 🎨 Color Palette & Variables (from `_variables.scss`)
+
+```scss
+$color-primary:        #55c57a;
+$color-primary-light:  #a2ff91;
+$color-primary-dark:   #1aae7d;
+$color-title-light:    #63da8b;
+$color-title-dark:     #197b55;
+$color-secondary-light:#ffb900;
+$color-secondary-dark: #ff7730;
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark:  #5643fa;
+$color-grey-dark:      #777;
+$color-grey-light-1:   #f7f7f7;
+$color-grey-dark-3:    #333;
+```
+
+Breakpoints:
+- `phone`: 37.5em (600px)
+- `tab-port`: 56.25em (900px)
+- `tab-land`: 75em (1200px)
+- `big-desktop`: 112.5em (1800px)
+
+---
+
+## 📌 Important Notes
+
+- All images and the video are referenced locally (`./images/`). Replace them with your own assets.
+- The project contains **no JavaScript** – everything is CSS-only.
+- Floating labels work via `:focus` + `:not(:placeholder-shown)` trick.
+- Tour cards use `perspective` + `rotateY` for 3D flip effect.
+- Story section uses `shape-outside` + `clip-path` for circular text wrap.
+
+---
+
+## 🙏 Credits & Thanks
+
+- Original design & course by **Jonas Schmedtmann** (@jonasschmedtmann)
+- My custom Sass refactoring, Persian logo, and deployment setup by **Sobhan-SRZA**
+- Special thanks to **DeepSeek** for helping with the final touches
+
+---
+
+## 📬 Contact & Socials
+
+- Website: https://srza.ir
+- Telegram: @d_opa_mine & @Sobhan_SRZA
+- Instagram, Twitch, YouTube, GitHub: links in original README
+- Discord communities linked in README
+
+---
+
+⭐ Feel free to star this repo if you found it useful!
+
+Made with ❤️ and a lot of Sass
+
+**Sobhan-SRZA** – February 2026
+
+---
+
+**This README is ready to copy-paste into your GitHub repository.**  
+Just replace the live demo link and add your images when you push.  
+
+Let me know if you want a **dark mode version**, **TypeScript/React rewrite**, or **Netlify/Vercel deployment** next! 🚀
